@@ -31,19 +31,6 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    public void Jump(InputAction.CallbackContext context)
-    {
-        if (context.performed && grounded && rb.velocity.y == 0f)
-        {
-            rb.velocity = new Vector2(rb.velocity.x, jumpForce);
-        }
-
-        if (context.canceled && rb.velocity.y > 0f)
-        {
-            rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f);
-        }
-    }
-
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.tag == "Ground")
@@ -66,6 +53,19 @@ public class PlayerMovement : MonoBehaviour
         Vector3 localScale = transform.localScale;
         localScale.x *= -1f;
         transform.localScale = localScale;
+    }
+
+    public void Jump(InputAction.CallbackContext context)
+    {
+        if (context.performed && grounded && rb.velocity.y == 0f)
+        {
+            rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+        }
+
+        if (context.canceled && rb.velocity.y > 0f)
+        {
+            rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f);
+        }
     }
 
     public void Move(InputAction.CallbackContext context)
