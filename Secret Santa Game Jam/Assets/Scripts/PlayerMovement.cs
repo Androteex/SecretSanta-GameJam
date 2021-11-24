@@ -14,7 +14,7 @@ public class PlayerMovement : MonoBehaviour
     private float jumpForce = 8f;
     private bool facingRight = true;
 
-    private bool grounded;
+    [SerializeField] private bool grounded;
 
     // Update is called once per frame
     void FixedUpdate()
@@ -57,7 +57,7 @@ public class PlayerMovement : MonoBehaviour
 
     public void Jump(InputAction.CallbackContext context)
     {
-        if (context.performed && grounded && rb.velocity.y == 0f)
+        if (context.performed && grounded)
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpForce);
         }
