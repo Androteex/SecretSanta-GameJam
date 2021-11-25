@@ -19,7 +19,7 @@ public class PlayerGrapple : MonoBehaviour
         distanceJoint.enabled = false;
         movementScript = GetComponent<PlayerMovement>();
     }
-
+        
     // Update is called once per frame
     void Update()
     {
