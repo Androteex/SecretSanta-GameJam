@@ -5,7 +5,7 @@ using UnityEngine.InputSystem;
 
 public class PlayerGrapple : MonoBehaviour
 {
-    public Camera mainCamera;
+    [SerializeField] private Camera mainCamera;
     public LineRenderer lineRenderer;
     public DistanceJoint2D distanceJoint;
 
@@ -16,10 +16,11 @@ public class PlayerGrapple : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        mainCamera = Camera.FindObjectOfType<Camera>();
         distanceJoint.enabled = false;
         movementScript = GetComponent<PlayerMovement>();
     }
-
+        
     // Update is called once per frame
     void Update()
     {

@@ -2,16 +2,16 @@
 #
 # Get latest from https://github.com/github/gitignore/blob/master/Unity.gitignore
 #
-/[Ll]ibrary/
-/[Tt]emp/
-/[Oo]bj/
-/[Bb]uild/
-/[Bb]uilds/
-/[Ll]ogs/
-/[Mm]emoryCaptures/
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+[Mm]emoryCaptures/
 
 # Asset meta data should only be ignored when the corresponding asset is also ignored
-!/[Aa]ssets/**/*.meta
+![Aa]ssets/**/*.meta
 
 # Uncomment this line if you wish to ignore the asset store tools plugin
 # /[Aa]ssets/AssetStoreTools*
@@ -59,3 +59,14 @@ sysinfo.txt
 crashlytics-build.properties
 
 Secret Santa Game Jam/Temp/UnityLockfile
+Secret Santa Game Jam/Library/Artifacts/58/581fecf30257c18c58905ab03ccc7e1a
+Secret Santa Game Jam/Library/Artifacts/bc/bc31d0b5519436166ef822b83752a1ad
+Secret Santa Game Jam/Library/Artifacts/e9/e91a82da54e1edac5e2460dfad3da339
+Secret Santa Game Jam/Library/CurrentLayout-default.dwlt
+Secret Santa Game Jam/Library/SourceAssetDB
+Secret Santa Game Jam/Library/ShaderCache/EditorEncounteredVariants
+Secret Santa Game Jam/Library/ScriptAssemblies/Assembly-CSharp.dll
+Secret Santa Game Jam/Library/SceneVisibilityState.asset
+Secret Santa Game Jam/Library/InspectorExpandedItems.asset
+Secret Santa Game Jam/Logs/AssetImportWorker0-prev.log
+Secret Santa Game Jam/Logs/AssetImportWorker0.log
