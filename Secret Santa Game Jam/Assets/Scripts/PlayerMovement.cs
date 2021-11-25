@@ -16,11 +16,9 @@ public class PlayerMovement : MonoBehaviour
 
     [SerializeField] private bool grounded;
 
-    // Update is called once per frame
-    void FixedUpdate()
-    {
-        rb.velocity = new Vector3(horizontal * speed, rb.velocity.y);
 
+    void Update()
+    {
         if (!facingRight && horizontal > 0f)
         {
             Flip();
@@ -29,6 +27,10 @@ public class PlayerMovement : MonoBehaviour
         {
             Flip();
         }
+    }
+    void FixedUpdate()
+    {
+        rb.velocity = new Vector3(horizontal * speed, rb.velocity.y);
     }
 
     private void OnTriggerEnter2D(Collider2D other)
