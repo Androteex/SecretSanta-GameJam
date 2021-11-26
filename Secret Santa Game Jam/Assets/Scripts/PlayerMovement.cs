@@ -5,32 +5,34 @@ using UnityEngine.InputSystem;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public Rigidbody2D rb;
-    public Transform groundCheck;
-    public LayerMask groundLayer;
-
-    private float horizontal;
+    [Header("Player Settings:")]
+    [SerializeField] private Rigidbody2D rb;
     [SerializeField] private float speed = 6f;
     [SerializeField] private float jumpForce = 10f;
+
+    // Private variables
+    private float horizontalMove;
     private bool facingRight = true;
-
-    [SerializeField] private bool grounded;
-
+    private bool grounded;
 
     void Update()
     {
-        if (!facingRight && horizontal > 0f)
+        if (!facingRight && horizontalMove > 0f)
         {
             Flip();
         }
-        else if (facingRight && horizontal < 0f)
+        else if (facingRight && horizontalMove < 0f)
         {
             Flip();
         }
     }
     void FixedUpdate()
     {
-        rb.velocity = new Vector3(horizontal * speed, rb.velocity.y);
+        if (PlayerGrapple.grappling)
+        {
+            // Add velocity in the direction of PlayerGrapple.rayDir
+        }
+        rb.velocity = new Vector2(horizontalMove * speed, rb.velocity.y);
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -72,6 +74,6 @@ public class PlayerMovement : MonoBehaviour
 
     public void Move(InputAction.CallbackContext context)
     {
-        horizontal = context.ReadValue<Vector2>().x;
+        horizontalMove = context.ReadValue<Vector2>().x;
     }
 }
