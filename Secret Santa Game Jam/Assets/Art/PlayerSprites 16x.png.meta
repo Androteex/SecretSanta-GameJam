@@ -8,6 +8,9 @@ TextureImporter:
   - first:
       213: 7800117209854033574
     second: PlayerSprites 16x_1
+  - first:
+      213: -4874257920172125950
+    second: PlayerSprites 16x_2
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -158,6 +161,27 @@ TextureImporter:
       bones: []
       spriteID: 6aeb2cb86459f3c60800000000000000
       internalID: 7800117209854033574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSprites 16x_2
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 19
+        height: 16
+      alignment: 9
+      pivot: {x: 0.42105263, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 201918c1f382b5cb0800000000000000
+      internalID: -4874257920172125950
       vertices: []
       indices: 
       edges: []

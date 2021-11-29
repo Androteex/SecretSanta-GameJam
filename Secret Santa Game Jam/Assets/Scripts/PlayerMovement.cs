@@ -9,11 +9,11 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private float speed = 6f;
     [SerializeField] private float jumpForce = 10f;
+    [SerializeField] private bool grounded;
 
     // Private variables
     private float horizontalMove;
-    private bool facingRight = true;
-    [SerializeField] private bool grounded;
+    [HideInInspector] public bool facingRight = true;
 
     void Update()
     {
@@ -33,7 +33,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.tag == "Ground")
+        if (other.tag == "Ground" || other.tag == "PickupBlock")
         {
             grounded = true;
         }
@@ -41,7 +41,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        if (other.tag == "Ground")
+        if (other.tag == "Ground" || other.tag == "PickupBlock")
         {
             grounded = false;
         }
