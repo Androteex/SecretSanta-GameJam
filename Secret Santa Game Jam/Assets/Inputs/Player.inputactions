@@ -38,7 +38,7 @@
                     "interactions": ""
                 },
                 {
-                    "name": "Grapple",
+                    "name": "Interaction",
                     "type": "Button",
                     "id": "b8e7e77b-d29b-45ff-9364-38a853132467",
                     "expectedControlType": "Button",
@@ -311,11 +311,11 @@
                 {
                     "name": "",
                     "id": "f5c06620-4a85-4715-a47a-1ec14c2f8e21",
-                    "path": "<Mouse>/leftButton",
+                    "path": "<Keyboard>/e",
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard&Mouse",
-                    "action": "Grapple",
+                    "action": "Interaction",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },

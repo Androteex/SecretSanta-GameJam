@@ -13,7 +13,7 @@ public class PlayerMovement : MonoBehaviour
     // Private variables
     private float horizontalMove;
     private bool facingRight = true;
-    private bool grounded;
+    [SerializeField] private bool grounded;
 
     void Update()
     {
@@ -28,10 +28,6 @@ public class PlayerMovement : MonoBehaviour
     }
     void FixedUpdate()
     {
-        if (PlayerGrapple.grappling)
-        {
-            // Add velocity in the direction of PlayerGrapple.rayDir
-        }
         rb.velocity = new Vector2(horizontalMove * speed, rb.velocity.y);
     }
 
