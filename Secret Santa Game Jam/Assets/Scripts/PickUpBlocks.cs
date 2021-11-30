@@ -13,8 +13,6 @@ public class PickUpBlocks : MonoBehaviour
     [SerializeField] private Sprite holdingSprite;
 
     private PlayerMovement movementScript;
-    private Rigidbody2D rb;
-    private bool holdingBlock = false;
     private float force = 15f;
     private Vector2 mousePoint;
     private Vector2 projectedMousePoint;
@@ -23,6 +21,8 @@ public class PickUpBlocks : MonoBehaviour
     private GameObject block;
     private GameObject mouseTracker;
     private SpriteRenderer spriteRenderer;
+
+    public bool holdingBlock = false;
 
     public GameObject pointPrefab;
     private GameObject[] points;
@@ -33,7 +33,6 @@ public class PickUpBlocks : MonoBehaviour
     {
         movementScript = GetComponent<PlayerMovement>();
         spriteRenderer = GetComponent<SpriteRenderer>();
-        rb = GetComponent<Rigidbody2D>();
 
         spriteRenderer.sprite = normalSprite;
     }
@@ -82,7 +81,7 @@ public class PickUpBlocks : MonoBehaviour
                     block.transform.parent = this.transform;
                     block.GetComponent<Rigidbody2D>().isKinematic = true;
                     block.GetComponent<BoxCollider2D>().isTrigger = true;
-                    block.transform.position = new Vector3(transform.position.x + 0.5f, transform.position.y + 0.5f, transform.position.y);
+                    block.transform.position = new Vector3(transform.position.x + 0.5f, transform.position.y + 0.45f, transform.position.y);
                     holdingBlock = true;
 
                     spriteRenderer.sprite = holdingSprite;
@@ -99,7 +98,7 @@ public class PickUpBlocks : MonoBehaviour
                     block.transform.parent = this.transform;
                     block.GetComponent<Rigidbody2D>().isKinematic = true;
                     block.GetComponent<BoxCollider2D>().isTrigger = true;
-                    block.transform.position = new Vector3(transform.position.x - 0.5f, transform.position.y + 0.5f, transform.position.y);
+                    block.transform.position = new Vector3(transform.position.x - 0.5f, transform.position.y + 0.45f, transform.position.y);
                     holdingBlock = true;
 
                     spriteRenderer.sprite = holdingSprite;

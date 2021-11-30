@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MovePlatform : MonoBehaviour
 {
-    private Vector3 startPos = new Vector3(24.5f, -2.5f, 0f);
+    private Vector3 startPos = new Vector3(24.5f, -3.5f, 0f);
 
     private void Start()
     {

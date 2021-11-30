@@ -9,10 +9,10 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private float speed = 6f;
     [SerializeField] private float jumpForce = 10f;
-    [SerializeField] private bool grounded;
 
     // Private variables
-    private float horizontalMove;
+    public bool grounded;
+    [HideInInspector] public float horizontalMove;
     [HideInInspector] public bool facingRight = true;
 
     void Update()
@@ -36,7 +36,7 @@ public class PlayerMovement : MonoBehaviour
         if (other != null)
         {
             grounded = true;
-        }
+        } 
     }
 
     private void OnTriggerExit2D(Collider2D other)
