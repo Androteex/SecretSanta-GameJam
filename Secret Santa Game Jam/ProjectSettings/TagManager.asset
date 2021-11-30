@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Ground
   - PickupBlock
+  - BlockBlocker
   layers:
   - Default
   - TransparentFX
@@ -15,8 +16,8 @@ TagManager:
   - UI
   - Player
   - Platform
-  - Box
-  - 
+  - Block
+  - BlockBlocker
   - 
   - 
   - 
@@ -40,6 +41,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Background
+    uniqueID: 2931005633
+    locked: 0
   - name: Platforms
     uniqueID: 3646680047
     locked: 0

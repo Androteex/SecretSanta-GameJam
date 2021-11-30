@@ -33,7 +33,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.tag == "Ground" || other.tag == "PickupBlock")
+        if (other != null)
         {
             grounded = true;
         }
@@ -41,7 +41,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        if (other.tag == "Ground" || other.tag == "PickupBlock")
+        if (other != null)
         {
             grounded = false;
         }
