@@ -10,8 +10,9 @@ public class PlayerAnimations : MonoBehaviour
     private Rigidbody2D rb;
 
     private float horizontalMove;
-    private bool grounded;
     private bool holdingBlock;
+    private bool grounded;
+    private bool canMove;
     private string currentState;
 
     private void Start()
@@ -26,6 +27,7 @@ public class PlayerAnimations : MonoBehaviour
     {
         horizontalMove = movementScript.horizontalMove;
         grounded = movementScript.grounded;
+        canMove = movementScript.canMove;
         holdingBlock = pickupScript.holdingBlock;
 
         AnimationHandler();
@@ -42,7 +44,7 @@ public class PlayerAnimations : MonoBehaviour
 
     private void AnimationHandler()
     {
-        if (horizontalMove != 0 && grounded)
+        if (horizontalMove != 0 && grounded && canMove)
         {
             if (holdingBlock)
             {

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ButtonController : MonoBehaviour
+public class ButtonPlatform : MonoBehaviour
 {
     public MovePlatform platformScript;
 
@@ -10,7 +10,7 @@ public class ButtonController : MonoBehaviour
     {
         if (collision.tag == "PickupBlock")
         {
-            platformScript.MovePlatformToPoint();
+            platformScript.ShowPlatform();
         }
     }
 }
