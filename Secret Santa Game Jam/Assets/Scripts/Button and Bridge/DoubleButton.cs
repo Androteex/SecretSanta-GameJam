@@ -2,17 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DoubleButtonScript : MonoBehaviour
+public class DoubleButton : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public bool active = false;
+
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        
+        active = true;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnTriggerExit2D(Collider2D collision)
     {
-        
+        active = false;
     }
 }

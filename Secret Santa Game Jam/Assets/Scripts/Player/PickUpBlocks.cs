@@ -79,6 +79,7 @@ public class PickUpBlocks : MonoBehaviour
                 {
                     block = hit.transform.gameObject;
                     block.transform.parent = this.transform;
+                    block.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
                     block.GetComponent<Rigidbody2D>().isKinematic = true;
                     block.GetComponent<BoxCollider2D>().isTrigger = true;
                     block.transform.position = new Vector3(transform.position.x + 0.5f, transform.position.y + 0.45f, transform.position.y);
