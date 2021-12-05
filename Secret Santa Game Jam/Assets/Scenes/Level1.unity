@@ -3762,6 +3762,7 @@ GameObject:
   - component: {fileID: 513505359}
   - component: {fileID: 513505358}
   - component: {fileID: 513505361}
+  - component: {fileID: 513505362}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -3850,6 +3851,26 @@ MonoBehaviour:
   target2: {fileID: 92205417}
   target3: {fileID: 2022278383}
   player: {fileID: 1672528176}
+--- !u!114 &513505362
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 513505357}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a160d838ff8b4b4693ac20007e008c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AssetsPPU: 16
+  m_RefResolutionX: 288
+  m_RefResolutionY: 160
+  m_UpscaleRT: 0
+  m_PixelSnapping: 0
+  m_CropFrameX: 0
+  m_CropFrameY: 0
+  m_StretchFill: 0
 --- !u!1 &570747385
 GameObject:
   m_ObjectHideFlags: 0
@@ -5761,8 +5782,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1363961663
-  m_SortingLayer: -2
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: -1839800340172198035, guid: 237afd00efedee041b8124c7e8c05e8c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -5925,8 +5946,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1363961663
-  m_SortingLayer: -2
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: -3863278645402197946, guid: 237afd00efedee041b8124c7e8c05e8c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -6471,6 +6492,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 8690499804909463552, guid: ea8e4ebf26b236b4fb51e99aae979260, type: 3}
+      propertyPath: m_SortingLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8690499804909463552, guid: ea8e4ebf26b236b4fb51e99aae979260, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 700422593
+      objectReference: {fileID: 0}
     - target: {fileID: 8690499804909463555, guid: ea8e4ebf26b236b4fb51e99aae979260, type: 3}
       propertyPath: m_RootOrder
       value: 1

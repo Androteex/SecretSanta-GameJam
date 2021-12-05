@@ -15,6 +15,7 @@ public class PlayerAnimations : MonoBehaviour
     private bool canMove;
     private string currentState;
 
+
     private void Start()
     {
         movementScript = GetComponent<PlayerMovement>();

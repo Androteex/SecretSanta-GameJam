@@ -19,6 +19,7 @@ public class PlayerMovement : MonoBehaviour
     [HideInInspector] public bool facingRight = true;
     [HideInInspector] public float horizontalMove;
 
+
     void Update()
     {
         if (canMove)
